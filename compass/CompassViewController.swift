@@ -58,16 +58,20 @@ class CompassViewController: UIViewController {
     public func volumeAdjustment(angleLo: Double, angleHi: Double, angleCur: Float) -> Float {
         print("low angle: ", angleLo, "hi angle: ", angleHi, "current angle", angleCur)
         var vol : Float = 1
+        var mid : Float = 0
 
         // first case scenario: lo < hi
         if(angleLo < angleHi){
-            let mid = Float((angleHi - angleLo) / 2)
-            vol = abs((angleCur - mid)/(Float(angleHi) - mid))
+            mid = Float(angleHi + angleLo) / 2
+            vol = 1 - abs((angleCur - mid) / (Float(angleHi) - mid))
             print(">>>>>> current vol: ", vol)
         }
-        // second case scenario: hi < lo
+        // second case scenario: lo > hi
         else {
-            
+            mid = Float(angleHi - ((6.28 - angleLo + angleHi) / 2))
+            print("mid ===== ", mid)
+            vol = 1 - abs((angleCur - mid) / (Float(angleHi) - mid))
+            print(">>>>>> current vol: ", vol)
         }
         return vol
     }
@@ -112,9 +116,10 @@ class CompassViewController: UIViewController {
       UIView.animate(withDuration: 0.5) {
         // radian
         let angle = computeNewAngle(with: CGFloat(newHeading))
+        let angleFlipped = -angle
 //        let angleDegree = -angle.radiansToDegrees
-        print("ANGLE: ", angle)
-        print(newHeading) // this are the degrees :)
+        print("ANGLE: ", angleFlipped)
+        //print(newHeading) // this are the degrees :)
 
 //        if(newHeading >= 355 && newHeading <= 360){
 //            print("sound1 playing")
@@ -129,13 +134,13 @@ class CompassViewController: UIViewController {
 //                }
 //            }
         
-        if(angle >= -0.5 && angle <= 0.5){
+        if((angleFlipped < 6.28 && angleFlipped > 4.71) || (angleFlipped < 1.57 && angleFlipped > 0)){
             print("sound1 playing")
             
-            self.sound1?.volume = self.volumeAdjustment(angleLo: -0.8, angleHi: 0.8, angleCur: Float(angle))
-        } else if (angle >= -3.64 && angle <= -2.54) {
+            self.sound1?.volume = self.volumeAdjustment(angleLo: 4.71, angleHi: 1.57, angleCur: Float(angleFlipped))
+        } else if (angleFlipped > 1.57 && angleFlipped < 4.71) {
             print("sound2 playing")
-            self.sound2?.volume = self.volumeAdjustment(angleLo: -3.64, angleHi: -2.54, angleCur: Float(angle))
+            self.sound2?.volume = self.volumeAdjustment(angleLo: 1.57, angleHi: 4.71, angleCur: Float(angleFlipped))
         } else {
             self.sound1?.volume = 0
             self.sound2?.volume = 0
