@@ -54,6 +54,23 @@ class CompassViewController: UIViewController {
     }()
     return adjAngle
   }
+    
+    public func volumeAdjustment(angleLo: Double, angleHi: Double, angleCur: Float) -> Float {
+        print("low angle: ", angleLo, "hi angle: ", angleHi, "current angle", angleCur)
+        var vol : Float = 1
+
+        // first case scenario: lo < hi
+        if(angleLo < angleHi){
+            let mid = Float((angleHi - angleLo) / 2)
+            vol = abs((angleCur - mid)/(Float(angleHi) - mid))
+            print(">>>>>> current vol: ", vol)
+        }
+        // second case scenario: hi < lo
+        else {
+            
+        }
+        return vol
+    }
   
     override func viewWillAppear(_ animated: Bool) {
         //////  sounds load \\\\\\\
@@ -112,12 +129,13 @@ class CompassViewController: UIViewController {
 //                }
 //            }
         
-        if(angle >= -0.1 && angle <= 0.1){
+        if(angle >= -0.5 && angle <= 0.5){
             print("sound1 playing")
-            self.sound1?.volume = 1
-        } else if (angle >= -3.25 && angle <= -3.15) {
+            
+            self.sound1?.volume = self.volumeAdjustment(angleLo: -0.8, angleHi: 0.8, angleCur: Float(angle))
+        } else if (angle >= -3.64 && angle <= -2.54) {
             print("sound2 playing")
-                self.sound2?.volume = 1
+            self.sound2?.volume = self.volumeAdjustment(angleLo: -3.64, angleHi: -2.54, angleCur: Float(angle))
         } else {
             self.sound1?.volume = 0
             self.sound2?.volume = 0
