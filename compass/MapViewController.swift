@@ -44,7 +44,6 @@ class MapViewController: UIViewController {
         //print("numberOfLoops", isThatYou?.numberOfLoops)
         isThatYou?.prepareToPlay()
         isThatYou?.play()
-        isThatYou?.play()
         print("Is it playng? ")
     } catch {
         print("couldn't load file :(")
