@@ -30,9 +30,7 @@ class MapViewController: UIViewController {
   }
   
   override func viewDidAppear(_ animated: Bool) {
-    
-    Sound.play(file: "isthatyou01.wav")
-    
+        
     super.viewDidAppear(animated)
     let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.didTap(_:)))
     mapView.addGestureRecognizer(gestureRecognizer)
