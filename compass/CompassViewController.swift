@@ -14,12 +14,14 @@ class CompassViewController: UIViewController {
   @IBOutlet weak var imageView: UIImageView!
   let locationDelegate = LocationDelegate()
   var latestLocation: CLLocation? = nil
-  var yourLocationBearing: CGFloat { return latestLocation?.bearingToLocationRadian(self.yourLocation) ?? 0 }
-  var yourLocation: CLLocation {
-    get { return UserDefaults.standard.currentLocation }
-    set { UserDefaults.standard.currentLocation = newValue }
-  }
-    
+  var yourLocationBearing: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_cats) ?? 0 }
+//  var yourLocation: CLLocation {
+//    get { return UserDefaults.standard.currentLocation }
+//    set { UserDefaults.standard.currentLocation = newValue }
+//  }
+//  var location_cats = CLLocation(latitude: 35.869243, longitude: 128.595156)
+  var location_cats = CLLocation(latitude: 35.875508236691772, longitude: 128.58446901882641)
+
   let path1 = Bundle.main.path(forResource: "cats.mp3", ofType:nil)!
   let path2 = Bundle.main.path(forResource: "art.mp3", ofType:nil)!
   let path3 = Bundle.main.path(forResource: "hall.mp3", ofType:nil)!
@@ -92,6 +94,8 @@ class CompassViewController: UIViewController {
         return CGFloat(self.orientationAdjustment().degreesToRadians + heading)
       }
       
+      print(self.location_cats)
+        
       UIView.animate(withDuration: 0.5) {
         
         let angle = computeNewAngle(with: CGFloat(newHeading))
@@ -127,20 +131,20 @@ class CompassViewController: UIViewController {
       }
     }
     
-    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CompassViewController.showMap))
-    view.addGestureRecognizer(tapGestureRecognizer)
+//    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CompassViewController.showMap))
+//    view.addGestureRecognizer(tapGestureRecognizer)
   }
   
-  func showMap() {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let mapViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController")
-    ((mapViewController as? UINavigationController)?.viewControllers.first as? MapViewController)?.delegate = self
-    self.present(mapViewController, animated: true, completion: nil)
-  }
+//  func showMap() {
+//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//    let mapViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController")
+//    ((mapViewController as? UINavigationController)?.viewControllers.first as? MapViewController)?.delegate = self
+//    self.present(mapViewController, animated: true, completion: nil)
+//  }
 }
 
-extension CompassViewController: MapViewControllerDelegate {
-  func update(location: CLLocation) {
-    yourLocation = location
-  }
-}
+//extension CompassViewController: MapViewControllerDelegate {
+//  func update(location: CLLocation) {
+//    yourLocation = location
+//  }
+//}
