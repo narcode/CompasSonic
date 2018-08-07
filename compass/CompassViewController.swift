@@ -93,7 +93,7 @@ class CompassViewController: UIViewController {
       }
       
       UIView.animate(withDuration: 0.5) {
-        
+        // radian
         let angle = computeNewAngle(with: CGFloat(newHeading))
 //        let angleDegree = -angle.radiansToDegrees
         print("ANGLE: ", angle)
