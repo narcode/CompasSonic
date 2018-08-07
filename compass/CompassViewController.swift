@@ -3,7 +3,9 @@
 //  compass
 //
 //  Created by Federico Zanetello on 05/04/2017.
-//  Copyright © 2017 Kimchi Media. All rights reserved.
+//
+//  *** Tweaked and Hacked by CompasSonic Corp @ ICMC 2018 **** |(o . 0) /
+//  NO Copyright
 //
 
 import UIKit
@@ -16,15 +18,17 @@ class CompassViewController: UIViewController {
   var latestLocation: CLLocation? = nil
   var yourLocationBearing: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_cats) ?? 0 }
   var yourLocationBearing2: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_hall) ?? 0 }
+  var yourLocationBearing3: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_art) ?? 0 }
 
 //  var yourLocation: CLLocation {
 //    get { return UserDefaults.standard.currentLocation }
 //    set { UserDefaults.standard.currentLocation = newValue }
 //  }
-//  var location_cats = CLLocation(latitude: 35.869243, longitude: 128.595156)
-  var location_cats = CLLocation(latitude: 35.875508236691772, longitude: 128.58446901882641)
-  var location_hall = CLLocation(latitude: 35.875711640645228, longitude: 128.59409842832042)
 
+  // load ICMClocations and sounds
+  var location_cats = CLLocation(latitude: 35.869243, longitude: 128.595156)
+  var location_hall = CLLocation(latitude: 35.875711640645228, longitude: 128.59409842832042)
+  var location_art = CLLocation(latitude: 35.875508236691772, longitude: 128.58446901882641)
 
   let path1 = Bundle.main.path(forResource: "cats.mp3", ofType:nil)!
   let path2 = Bundle.main.path(forResource: "hall.mp3", ofType:nil)!
@@ -32,6 +36,7 @@ class CompassViewController: UIViewController {
 
   var sound1 : Sound? = nil
   var sound2 : Sound? = nil
+  var sound3 : Sound? = nil
   var sounds : Array<Sound?> = []
     
   let locationManager: CLLocationManager = {
@@ -62,17 +67,23 @@ class CompassViewController: UIViewController {
   }
   
     override func viewWillAppear(_ animated: Bool) {
-        //////  sounds load \\\\\\\
+        //////  sounds load (optimizaiton not important now) \\\\\\\
         // print(path)
         self.sound1 = Sound(url: URL(fileURLWithPath: path1))
         self.sound2 = Sound(url: URL(fileURLWithPath: path2))
+        self.sound3 = Sound(url: URL(fileURLWithPath: path3))
+        
         self.sounds.append(self.sound1)
         self.sounds.append(self.sound2)
+        self.sounds.append(self.sound3)
         
         self.sound1?.volume = 0
         self.sound1?.play(numberOfLoops: -1)
         self.sound2?.volume = 0
         self.sound2?.play(numberOfLoops: -1)
+        self.sound3?.volume = 0
+        self.sound3?.play(numberOfLoops: -1)
+        
     }
     
   override func viewDidLoad() {
@@ -88,7 +99,9 @@ class CompassViewController: UIViewController {
       
         let chris_value = Double(abs(self.yourLocationBearing.radiansToDegrees))
         let chris_value2 = Double(abs(self.yourLocationBearing2.radiansToDegrees))
-        print("CHRIS VALUE: ", chris_value, "chris value 2: ", chris_value2)
+        let chris_value3 = Double(abs(self.yourLocationBearing3.radiansToDegrees))
+        
+        print("CHRIS VALUE: ", chris_value, "chris value 2: ", chris_value2, "chris value 3: ", chris_value3)
 
         
       func computeNewAngle(with newAngle: CGFloat) -> CGFloat {
@@ -107,28 +120,19 @@ class CompassViewController: UIViewController {
         
       UIView.animate(withDuration: 0.5) {
         
-        let angle = computeNewAngle(with: CGFloat(newHeading))
+//        let angle = computeNewAngle(with: CGFloat(newHeading))
 //        let angleDegree = -angle.radiansToDegrees
 //        print("ANGLE: ", angle.radiansToDegrees)
         print("TRUE NORTH: ", newHeading) // this are the degrees :)
 //        let angle_cats = angle.radiansToDegrees
 //        let heading_cats = 360-abs(angle_cats)
         let heading_locations = 360-newHeading
-        print("CATS HEADING? -> ", heading_locations)
-//        if(newHeading >= 355 && newHeading <= 360){
-//            print("sound1 playing")
-//            self.sound1?.volume = 1
-//        } else {
-//            if(newHeading >= 354-25 && newHeading <= 354) {
-//                print("sound1 softer")
-//                self.sound1?.volume = Float((newHeading/365)-0.9)
-//            } else {
-//                print("sound1 at 0")
-//                self.sound1?.volume = 0
-//                }
-//            }
+        print("FIRST LOCATION -> ", heading_locations)
         
-        if(heading_locations >= chris_value-5 && heading_locations <= chris_value+5){
+        // calibration compensation or error margin:
+        let error_margin = 3.0
+        
+        if(heading_locations >= chris_value-error_margin && heading_locations <= chris_value+error_margin){
             print("sound1 playing")
             self.sound1?.volume = 1
         } else {
@@ -136,7 +140,8 @@ class CompassViewController: UIViewController {
             self.sound1?.volume = 0
         }
         
-        if(heading_locations >= chris_value2-5 && heading_locations <= chris_value2+5){
+        // play sounds if device is pointing to the specific location:
+        if(heading_locations >= chris_value2-error_margin && heading_locations <= chris_value2+error_margin){
             print("sound2 playing")
             self.sound2?.volume = 1
         } else {
@@ -144,7 +149,15 @@ class CompassViewController: UIViewController {
             self.sound2?.volume = 0
         }
         
-        self.imageView.transform = CGAffineTransform(rotationAngle: angle)
+        if(heading_locations >= chris_value3-error_margin && heading_locations <= chris_value3+error_margin){
+            print("sound3 playing")
+            self.sound3?.volume = 1
+        } else {
+            print("sound3 off")
+            self.sound3?.volume = 0
+        }
+        
+//        self.imageView.transform = CGAffineTransform(rotationAngle: angle)
       }
     }
     
