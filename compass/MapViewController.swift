@@ -5,13 +5,10 @@
 //  Created by Federico Zanetello on 23/04/2017.
 //  Copyright © 2017 Kimchi Media. All rights reserved.
 //
-import AVFoundation
 import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
-  var isThatYou: AVAudioPlayer?
-
   var delegate: MapViewControllerDelegate!
   @IBOutlet weak var mapView: MKMapView!
   
@@ -33,22 +30,6 @@ class MapViewController: UIViewController {
   }
   
   override func viewDidAppear(_ animated: Bool) {
-    print("in function>>>>>>")
-    
-    let path = Bundle.main.path(forResource: "isthatyou01.wav", ofType:nil)!
-    let url = URL(fileURLWithPath: path)
-    
-    do {
-        isThatYou = try AVAudioPlayer(contentsOf: url)
-        isThatYou?.numberOfLoops = -1
-        //print("numberOfLoops", isThatYou?.numberOfLoops)
-        isThatYou?.prepareToPlay()
-        isThatYou?.play()
-        print("Is it playng? ")
-    } catch {
-        print("couldn't load file :(")
-    }
-    
     super.viewDidAppear(animated)
     let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.didTap(_:)))
     mapView.addGestureRecognizer(gestureRecognizer)
