@@ -18,6 +18,7 @@
 		64E8BF7E1E953A6200B10108 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E8BF7D1E953A6200B10108 /* LocationDelegate.swift */; };
 		64E8BF801E953ACC00B10108 /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E8BF7F1E953ACC00B10108 /* CLLocation+Extension.swift */; };
 		A7E4CB7321196DE300E98528 /* isthatyou01.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7221196DE300E98528 /* isthatyou01.wav */; };
+		A7E4CB772119873F00E98528 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4CB762119873F00E98528 /* Sound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		64E8BF7D1E953A6200B10108 /* LocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
 		64E8BF7F1E953ACC00B10108 /* CLLocation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
 		A7E4CB7221196DE300E98528 /* isthatyou01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = isthatyou01.wav; sourceTree = "<group>"; };
+		A7E4CB762119873F00E98528 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				647284241EB38CE9002474A2 /* UserDefauts+Extensions.swift */,
 				64E8BF7D1E953A6200B10108 /* LocationDelegate.swift */,
 				64E8BF7F1E953ACC00B10108 /* CLLocation+Extension.swift */,
+				A7E4CB762119873F00E98528 /* Sound.swift */,
 				64E8BF6F1E9535A200B10108 /* Main.storyboard */,
 				64E8BF721E9535A200B10108 /* Assets.xcassets */,
 				64E8BF741E9535A200B10108 /* LaunchScreen.storyboard */,
@@ -171,6 +174,7 @@
 				64E8BF7E1E953A6200B10108 /* LocationDelegate.swift in Sources */,
 				64BE1FD81EAC8E23009A00B6 /* MapViewController.swift in Sources */,
 				64E8BF6C1E9535A200B10108 /* AppDelegate.swift in Sources */,
+				A7E4CB772119873F00E98528 /* Sound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
