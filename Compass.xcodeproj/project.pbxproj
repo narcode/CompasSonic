@@ -111,7 +111,7 @@
 				TargetAttributes = {
 					64E8BF671E9535A200B10108 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = F27MJTAAUV;
+						DevelopmentTeam = 7TXP3XY4W3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -283,7 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F27MJTAAUV;
+				DEVELOPMENT_TEAM = 7TXP3XY4W3;
 				INFOPLIST_FILE = compass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -297,7 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F27MJTAAUV;
+				DEVELOPMENT_TEAM = 7TXP3XY4W3;
 				INFOPLIST_FILE = compass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
