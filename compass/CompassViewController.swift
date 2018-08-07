@@ -8,13 +8,9 @@
 
 import UIKit
 import CoreLocation
-import AVFoundation
 
 class CompassViewController: UIViewController {
   @IBOutlet weak var imageView: UIImageView!
-    
-  var isThatYou: AVAudioPlayer?
-  
   let locationDelegate = LocationDelegate()
   var latestLocation: CLLocation? = nil
   var yourLocationBearing: CGFloat { return latestLocation?.bearingToLocationRadian(self.yourLocation) ?? 0 }
@@ -51,17 +47,6 @@ class CompassViewController: UIViewController {
   }
   
   override func viewDidLoad() {
-    let path = Bundle.main.path(forResource: "isthatyou01.wav", ofType:nil)!
-    let url = URL(fileURLWithPath: path)
-    do {
-        isThatYou = try AVAudioPlayer(contentsOf: url)
-        isThatYou?.numberOfLoops = 1
-        isThatYou?.prepareToPlay()
-        isThatYou?.play()
-    } catch {
-        print("couldn't load file :(")
-    }
-
     super.viewDidLoad()
     locationManager.delegate = locationDelegate
     
@@ -86,7 +71,11 @@ class CompassViewController: UIViewController {
       UIView.animate(withDuration: 0.5) {
         
         let angle = computeNewAngle(with: CGFloat(newHeading))
-        print(angle)
+        let angleDegree = -angle.radiansToDegrees
+        if(angleDegree >= 355 && angleDegree <= 365){
+            print(angleDegree)
+            Sound.play(file: "isthatyou01.wav")
+        }
         self.imageView.transform = CGAffineTransform(rotationAngle: angle)
       }
     }
