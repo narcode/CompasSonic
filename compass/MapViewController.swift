@@ -1,4 +1,4 @@
-//
+//  Jeena Yin
 //  MapViewController.swift
 //  compass
 //
