@@ -18,6 +18,7 @@
 		64E8BF7E1E953A6200B10108 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E8BF7D1E953A6200B10108 /* LocationDelegate.swift */; };
 		64E8BF801E953ACC00B10108 /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E8BF7F1E953ACC00B10108 /* CLLocation+Extension.swift */; };
 		8338E31921199B2A0076B9B2 /* gls.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8338E31821199B2A0076B9B2 /* gls.mp3 */; };
+		8338E31D2119B5270076B9B2 /* Hackathon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8338E31C2119B5270076B9B2 /* Hackathon.jpg */; };
 		A7E4CB7321196DE300E98528 /* isthatyou01.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7221196DE300E98528 /* isthatyou01.wav */; };
 		A7E4CB772119873F00E98528 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4CB762119873F00E98528 /* Sound.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		64E8BF7D1E953A6200B10108 /* LocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
 		64E8BF7F1E953ACC00B10108 /* CLLocation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
 		8338E31821199B2A0076B9B2 /* gls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gls.mp3; path = ../../../gls.mp3; sourceTree = "<group>"; };
+		8338E31C2119B5270076B9B2 /* Hackathon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Hackathon.jpg; path = ../../Hackathon.jpg; sourceTree = "<group>"; };
 		A7E4CB7221196DE300E98528 /* isthatyou01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = isthatyou01.wav; sourceTree = "<group>"; };
 		A7E4CB762119873F00E98528 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				64E8BF6F1E9535A200B10108 /* Main.storyboard */,
 				64E8BF721E9535A200B10108 /* Assets.xcassets */,
 				64E8BF741E9535A200B10108 /* LaunchScreen.storyboard */,
+				8338E31C2119B5270076B9B2 /* Hackathon.jpg */,
 				64E8BF771E9535A200B10108 /* Info.plist */,
 				A7E4CB7121196DC000E98528 /* Sonic */,
 			);
@@ -159,6 +162,7 @@
 				64E8BF761E9535A200B10108 /* LaunchScreen.storyboard in Resources */,
 				64E8BF731E9535A200B10108 /* Assets.xcassets in Resources */,
 				A7E4CB7321196DE300E98528 /* isthatyou01.wav in Resources */,
+				8338E31D2119B5270076B9B2 /* Hackathon.jpg in Resources */,
 				8338E31921199B2A0076B9B2 /* gls.mp3 in Resources */,
 				64E8BF711E9535A200B10108 /* Main.storyboard in Resources */,
 			);
