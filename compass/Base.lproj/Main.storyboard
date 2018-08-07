@@ -31,15 +31,8 @@
                                     <constraint firstAttribute="width" secondItem="7t5-o5-sfu" secondAttribute="height" multiplier="1:1" id="pwz-cf-sZU"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="find coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHJ-SQ-1B6">
-                                <rect key="frame" x="146" y="89" width="124" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="7t5-o5-sfu" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" id="95A-hf-n8F"/>
                             <constraint firstItem="7t5-o5-sfu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HoT-w6-N01"/>
