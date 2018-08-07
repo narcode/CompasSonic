@@ -21,7 +21,6 @@
 		8338E3212119C1150076B9B2 /* art.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7A2119BCCB00E98528 /* art.mp3 */; };
 		8338E3222119C1150076B9B2 /* cats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7B2119BCCB00E98528 /* cats.mp3 */; };
 		8338E3232119C1150076B9B2 /* hall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7C2119BCCC00E98528 /* hall.mp3 */; };
-		A7E4CB7321196DE300E98528 /* isthatyou01.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7221196DE300E98528 /* isthatyou01.wav */; };
 		A7E4CB772119873F00E98528 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4CB762119873F00E98528 /* Sound.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,9 +38,7 @@
 		64E8BF7D1E953A6200B10108 /* LocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
 		64E8BF7F1E953ACC00B10108 /* CLLocation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
 		8338E31821199B2A0076B9B2 /* gls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gls.mp3; path = ../../../gls.mp3; sourceTree = "<group>"; };
-		A7E4CB7221196DE300E98528 /* isthatyou01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = isthatyou01.wav; sourceTree = "<group>"; };
 		A7E4CB762119873F00E98528 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
-		A7E4CB782119B44700E98528 /* gls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gls.mp3; sourceTree = "<group>"; };
 		A7E4CB7A2119BCCB00E98528 /* art.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = art.mp3; sourceTree = "<group>"; };
 		A7E4CB7B2119BCCB00E98528 /* cats.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cats.mp3; sourceTree = "<group>"; };
 		A7E4CB7C2119BCCC00E98528 /* hall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hall.mp3; sourceTree = "<group>"; };
@@ -109,8 +106,6 @@
 				A7E4CB7A2119BCCB00E98528 /* art.mp3 */,
 				A7E4CB7B2119BCCB00E98528 /* cats.mp3 */,
 				A7E4CB7C2119BCCC00E98528 /* hall.mp3 */,
-				A7E4CB782119B44700E98528 /* gls.mp3 */,
-				A7E4CB7221196DE300E98528 /* isthatyou01.wav */,
 			);
 			path = Sonic;
 			sourceTree = "<group>";
@@ -147,7 +142,7 @@
 				TargetAttributes = {
 					64E8BF671E9535A200B10108 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = F27MJTAAUV;
+						DevelopmentTeam = 7TXP3XY4W3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -180,7 +175,6 @@
 				8338E3232119C1150076B9B2 /* hall.mp3 in Resources */,
 				64E8BF761E9535A200B10108 /* LaunchScreen.storyboard in Resources */,
 				64E8BF731E9535A200B10108 /* Assets.xcassets in Resources */,
-				A7E4CB7321196DE300E98528 /* isthatyou01.wav in Resources */,
 				8338E31921199B2A0076B9B2 /* gls.mp3 in Resources */,
 				64E8BF711E9535A200B10108 /* Main.storyboard in Resources */,
 			);
@@ -341,7 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F27MJTAAUV;
+				DEVELOPMENT_TEAM = 7TXP3XY4W3;
 				INFOPLIST_FILE = compass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,7 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F27MJTAAUV;
+				DEVELOPMENT_TEAM = 7TXP3XY4W3;
 				INFOPLIST_FILE = compass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
