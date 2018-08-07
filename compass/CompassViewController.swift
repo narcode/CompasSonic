@@ -90,7 +90,9 @@ class CompassViewController: UIViewController {
             print(angleDegree)
             self.sound1?.volume = 1
         } else {
-            self.sound1?.volume = 0.001
+            if(angleDegree >= 354-25 && angleDegree <= 354) {
+                self.sound1?.volume = Float((angleDegree/365)-0.9)
+                }
             }
         
         self.imageView.transform = CGAffineTransform(rotationAngle: angle)
