@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,12 +29,26 @@
                                     <constraint firstAttribute="width" secondItem="jY0-zq-k5b" secondAttribute="height" multiplier="1:1" id="Lai-Hz-aaG"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsu-Nm-qJR">
+                                <rect key="frame" x="143" y="73" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="s5I-No-5Vb"/>
+                                    <constraint firstAttribute="height" constant="21" id="wLf-17-7gs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Zsu-Nm-qJR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="127" id="12I-sK-u4z"/>
                             <constraint firstItem="jY0-zq-k5b" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3PK-5Q-zZm"/>
                             <constraint firstItem="jY0-zq-k5b" firstAttribute="width" relation="lessThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="width" id="J4z-ig-2AN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zsu-Nm-qJR" secondAttribute="trailing" constant="174" id="NcT-6X-myb"/>
                             <constraint firstItem="jY0-zq-k5b" firstAttribute="height" relation="lessThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="height" id="dm9-Eu-mRe"/>
+                            <constraint firstItem="jY0-zq-k5b" firstAttribute="top" secondItem="Zsu-Nm-qJR" secondAttribute="bottom" constant="52" id="gJa-0b-frd"/>
+                            <constraint firstItem="Zsu-Nm-qJR" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="53" id="inH-QI-Y62"/>
                             <constraint firstItem="jY0-zq-k5b" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="y8o-yV-Zfh"/>
                         </constraints>
                     </view>
