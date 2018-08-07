@@ -77,17 +77,17 @@
 				64E8BF721E9535A200B10108 /* Assets.xcassets */,
 				64E8BF741E9535A200B10108 /* LaunchScreen.storyboard */,
 				64E8BF771E9535A200B10108 /* Info.plist */,
-				A7E4CB7121196DC000E98528 /* Sounds */,
+				A7E4CB7121196DC000E98528 /* Sonic */,
 			);
 			path = compass;
 			sourceTree = "<group>";
 		};
-		A7E4CB7121196DC000E98528 /* Sounds */ = {
+		A7E4CB7121196DC000E98528 /* Sonic */ = {
 			isa = PBXGroup;
 			children = (
 				A7E4CB7221196DE300E98528 /* isthatyou01.wav */,
 			);
-			path = Sounds;
+			path = Sonic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
