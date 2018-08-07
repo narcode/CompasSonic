@@ -71,11 +71,9 @@ class CompassViewController: UIViewController {
       UIView.animate(withDuration: 0.5) {
         
         let angle = computeNewAngle(with: CGFloat(newHeading))
-        print("in function>>>>>>>")
         let angleDegree = -angle.radiansToDegrees
-        if(Int(angleDegree) >= 355 && Int(angleDegree) <= 365){
+        if(angleDegree >= 355 && angleDegree <= 365){
             print(angleDegree)
-            print("angle reached")
             Sound.play(file: "isthatyou01.wav")
         }
         self.imageView.transform = CGAffineTransform(rotationAngle: angle)
