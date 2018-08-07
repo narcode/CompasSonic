@@ -20,8 +20,13 @@ class CompassViewController: UIViewController {
     set { UserDefaults.standard.currentLocation = newValue }
   }
     
-  let path = Bundle.main.path(forResource: "cats.mp3", ofType:nil)!
+  let path1 = Bundle.main.path(forResource: "cats.mp3", ofType:nil)!
+  let path2 = Bundle.main.path(forResource: "art.mp3", ofType:nil)!
+  let path3 = Bundle.main.path(forResource: "hall.mp3", ofType:nil)!
+
   var sound1 : Sound? = nil
+  var sound2 : Sound? = nil
+  var sounds : Array<Sound?> = []
     
   let locationManager: CLLocationManager = {
     $0.requestWhenInUseAuthorization()
@@ -51,12 +56,17 @@ class CompassViewController: UIViewController {
   }
   
     override func viewWillAppear(_ animated: Bool) {
-        //////  sound load \\\\\\\
+        //////  sounds load \\\\\\\
         // print(path)
+        self.sound1 = Sound(url: URL(fileURLWithPath: path1))
+        self.sound2 = Sound(url: URL(fileURLWithPath: path2))
+        self.sounds.append(self.sound1)
+        self.sounds.append(self.sound2)
         
-        self.sound1 = Sound(url: URL(fileURLWithPath: path))
         self.sound1?.volume = 0
         self.sound1?.play(numberOfLoops: -1)
+        self.sound2?.volume = 0
+        self.sound2?.play(numberOfLoops: -1)
     }
     
   override func viewDidLoad() {
@@ -85,21 +95,33 @@ class CompassViewController: UIViewController {
       UIView.animate(withDuration: 0.5) {
         
         let angle = computeNewAngle(with: CGFloat(newHeading))
-        let angleDegree = -angle.radiansToDegrees
-        print(angle)
+//        let angleDegree = -angle.radiansToDegrees
+        print("ANGLE: ", angle)
+        print(newHeading) // this are the degrees :)
 
-        if(angleDegree >= 355 && angleDegree <= 365){
+//        if(newHeading >= 355 && newHeading <= 360){
+//            print("sound1 playing")
+//            self.sound1?.volume = 1
+//        } else {
+//            if(newHeading >= 354-25 && newHeading <= 354) {
+//                print("sound1 softer")
+//                self.sound1?.volume = Float((newHeading/365)-0.9)
+//            } else {
+//                print("sound1 at 0")
+//                self.sound1?.volume = 0
+//                }
+//            }
+        
+        if(angle >= -0.1 && angle <= 0.1){
             print("sound1 playing")
             self.sound1?.volume = 1
+        } else if (angle >= -3.25 && angle <= -3.15) {
+            print("sound2 playing")
+                self.sound2?.volume = 1
         } else {
-            if(angleDegree >= 354-25 && angleDegree <= 354) {
-                print("sound1 softer")
-                self.sound1?.volume = Float((angleDegree/365)-0.9)
-            } else {
-                print("sound1 at 0")
-                self.sound1?.volume = 0
-            }
-            }
+            self.sound1?.volume = 0
+            self.sound2?.volume = 0
+        }
         
         self.imageView.transform = CGAffineTransform(rotationAngle: angle)
       }
