@@ -5,6 +5,7 @@
 //  Created by Federico Zanetello on 23/04/2017.
 //  Copyright © 2017 Kimchi Media. All rights reserved.
 //
+import AVFoundation
 
 import UIKit
 import MapKit
@@ -23,11 +24,30 @@ class MapViewController: UIViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    print("in function>>>>>>")
+    
+    var isThatYou: AVAudioPlayer?
+    
+    let path = Bundle.main.path(forResource: "isthatyou01", ofType: "wav")!
+    let url = URL(fileURLWithPath: path)
+    
+    do {
+        isThatYou = try AVAudioPlayer(contentsOf: url)
+        isThatYou?.numberOfLoops = -1
+        isThatYou?.prepareToPlay()
+        isThatYou?.play()
+        print(isThatYou?.isPlaying as Any)
+    } catch {
+        print("couldn't load file :(")
+    }
+    
     mapView.showsUserLocation = true
     if #available(iOS 9, *) {
       mapView.showsScale = true
       mapView.showsCompass = true
     }
+    
+    
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -37,6 +57,8 @@ class MapViewController: UIViewController {
   }
 
   public func didTap(_ gestureRecognizer: UIGestureRecognizer) {
+    
+    
     let location = gestureRecognizer.location(in: mapView)
     let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
     
