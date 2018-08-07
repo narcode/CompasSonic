@@ -21,6 +21,7 @@
 		8338E31D2119B5270076B9B2 /* Hackathon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8338E31C2119B5270076B9B2 /* Hackathon.jpg */; };
 		A7E4CB7321196DE300E98528 /* isthatyou01.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7221196DE300E98528 /* isthatyou01.wav */; };
 		A7E4CB772119873F00E98528 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4CB762119873F00E98528 /* Sound.swift */; };
+		A7E4CB792119B44700E98528 /* gls.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB782119B44700E98528 /* gls.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		8338E31C2119B5270076B9B2 /* Hackathon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Hackathon.jpg; path = ../../Hackathon.jpg; sourceTree = "<group>"; };
 		A7E4CB7221196DE300E98528 /* isthatyou01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = isthatyou01.wav; sourceTree = "<group>"; };
 		A7E4CB762119873F00E98528 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		A7E4CB782119B44700E98528 /* gls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gls.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,7 @@
 		A7E4CB7121196DC000E98528 /* Sonic */ = {
 			isa = PBXGroup;
 			children = (
-				8338E31821199B2A0076B9B2 /* gls.mp3 */,
+				A7E4CB782119B44700E98528 /* gls.mp3 */,
 				A7E4CB7221196DE300E98528 /* isthatyou01.wav */,
 			);
 			path = Sonic;
@@ -131,7 +133,7 @@
 				TargetAttributes = {
 					64E8BF671E9535A200B10108 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = F27MJTAAUV;
+						DevelopmentTeam = 7TXP3XY4W3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -323,7 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F27MJTAAUV;
+				DEVELOPMENT_TEAM = 7TXP3XY4W3;
 				INFOPLIST_FILE = compass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -337,7 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F27MJTAAUV;
+				DEVELOPMENT_TEAM = 7TXP3XY4W3;
 				INFOPLIST_FILE = compass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

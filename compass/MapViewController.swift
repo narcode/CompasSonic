@@ -40,6 +40,9 @@ class MapViewController: UIViewController {
     let location = gestureRecognizer.location(in: mapView)
     let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
     
+    let coords = [coordinate.latitude, coordinate.longitude]
+    print(coords)
+    
     delegate.update(location: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude))
     self.dismiss(animated: true, completion: nil)
   }

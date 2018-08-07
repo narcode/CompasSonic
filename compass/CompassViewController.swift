@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 
 class CompassViewController: UIViewController {
+
   @IBOutlet weak var imageView: UIImageView!
   let locationDelegate = LocationDelegate()
   var latestLocation: CLLocation? = nil
@@ -18,7 +19,10 @@ class CompassViewController: UIViewController {
     get { return UserDefaults.standard.currentLocation }
     set { UserDefaults.standard.currentLocation = newValue }
   }
-  
+    
+  let path = Bundle.main.path(forResource: "isthatyou01.wav", ofType:nil)!
+  var sound1 : Sound? = nil
+    
   let locationManager: CLLocationManager = {
     $0.requestWhenInUseAuthorization()
     $0.desiredAccuracy = kCLLocationAccuracyBest
@@ -26,7 +30,7 @@ class CompassViewController: UIViewController {
     $0.startUpdatingHeading()
     return $0
   }(CLLocationManager())
-  
+    
   private func orientationAdjustment() -> CGFloat {
     let isFaceDown: Bool = {
       switch UIDevice.current.orientation {
@@ -46,8 +50,18 @@ class CompassViewController: UIViewController {
     return adjAngle
   }
   
+    override func viewWillAppear(_ animated: Bool) {
+        //////  sound load \\\\\\\
+        // print(path)
+        
+        self.sound1 = Sound(url: URL(fileURLWithPath: path))
+        self.sound1?.volume = 0
+        self.sound1?.play(numberOfLoops: -1)
+    }
+    
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     locationManager.delegate = locationDelegate
     
     locationDelegate.locationCallback = { location in
@@ -74,8 +88,13 @@ class CompassViewController: UIViewController {
         let angleDegree = -angle.radiansToDegrees
         if(angleDegree >= 355 && angleDegree <= 365){
             print(angleDegree)
-            Sound.play(file: "isthatyou01.wav")
-        }
+            self.sound1?.volume = 1
+        } else {
+            if(angleDegree >= 354-25 && angleDegree <= 354) {
+                self.sound1?.volume = Float((angleDegree/365)-0.9)
+                }
+            }
+        
         self.imageView.transform = CGAffineTransform(rotationAngle: angle)
       }
     }
