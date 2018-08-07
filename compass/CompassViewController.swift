@@ -20,7 +20,7 @@ class CompassViewController: UIViewController {
     set { UserDefaults.standard.currentLocation = newValue }
   }
     
-  let path = Bundle.main.path(forResource: "isthatyou01.wav", ofType:nil)!
+  let path = Bundle.main.path(forResource: "cats.mp3", ofType:nil)!
   var sound1 : Sound? = nil
     
   let locationManager: CLLocationManager = {
@@ -86,13 +86,19 @@ class CompassViewController: UIViewController {
         
         let angle = computeNewAngle(with: CGFloat(newHeading))
         let angleDegree = -angle.radiansToDegrees
+        print(angle)
+
         if(angleDegree >= 355 && angleDegree <= 365){
-            print(angleDegree)
+            print("sound1 playing")
             self.sound1?.volume = 1
         } else {
             if(angleDegree >= 354-25 && angleDegree <= 354) {
+                print("sound1 softer")
                 self.sound1?.volume = Float((angleDegree/365)-0.9)
-                }
+            } else {
+                print("sound1 at 0")
+                self.sound1?.volume = 0
+            }
             }
         
         self.imageView.transform = CGAffineTransform(rotationAngle: angle)

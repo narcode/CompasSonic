@@ -20,6 +20,7 @@ class LocationDelegate: NSObject, CLLocationManagerDelegate {
   
   func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
     headingCallback?(newHeading.trueHeading)
+    print("TRUE HEADING: ", newHeading.trueHeading)
   }
   
   func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
