@@ -28,16 +28,18 @@ class MapViewController: UIViewController {
     
     var isThatYou: AVAudioPlayer?
     
-    let path = Bundle.main.path(forResource: "isthatyou01", ofType: "wav")!
-    print(path)
+    let path = Bundle.main.path(forResource: "isthatyou01.wav", ofType:nil)!
+    print("path is >>>>>>>", path, "<<<<<<<<")
     let url = URL(fileURLWithPath: path)
     
     do {
         isThatYou = try AVAudioPlayer(contentsOf: url)
         isThatYou?.numberOfLoops = -1
+        //print("numberOfLoops", isThatYou?.numberOfLoops)
         isThatYou?.prepareToPlay()
         isThatYou?.play()
-        //print(isThatYou?.isPlaying as Any)
+//        let isP = isThatYou?.isPlaying
+//        print("Is it playng? ", isP)
     } catch {
         print("couldn't load file :(")
     }
