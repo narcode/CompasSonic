@@ -23,22 +23,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hackathon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D8-2z-BTe">
-                                <rect key="frame" x="-66" y="274" width="506" height="119"/>
+                                <rect key="frame" x="-66" y="240" width="506" height="153"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="textColor" red="1" green="0.49431848726658489" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICMC icon.jpg" highlightedImage="ICMC icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sbr-Nc-ln5">
-                                <rect key="frame" x="67" y="95" width="240" height="128"/>
+                                <rect key="frame" x="67" y="95" width="240" height="94"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engage | Preserve | Advance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBK-yc-owP">
-                                <rect key="frame" x="42" y="249" width="290" height="17"/>
+                                <rect key="frame" x="42" y="215" width="290" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Felipe Ignacio Noriega" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jae-EG-3qN">
-                                <rect key="frame" x="80" y="484" width="215" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Felipe Ignacio Noriega" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jae-EG-3qN">
+                                <rect key="frame" x="80" y="397" width="215" height="20.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -73,8 +73,8 @@
                                 <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Aug. 5-8 2018 - Daegu - South Korea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQu-UM-mAn">
-                                <rect key="frame" x="37" y="382" width="302" height="62"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug. 5-8 2018 - Daegu - South Korea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQu-UM-mAn">
+                                <rect key="frame" x="36" y="348" width="302" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -87,6 +87,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ISy-7w-UIf" secondAttribute="trailing" constant="90" id="7E0-fD-7BU"/>
                             <constraint firstItem="ISy-7w-UIf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="89" id="7jc-3B-2J4"/>
                             <constraint firstItem="905-iB-qb0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="131" id="A0P-LH-UGb"/>
+                            <constraint firstItem="WQu-UM-mAn" firstAttribute="top" secondItem="SBK-yc-owP" secondAttribute="bottom" constant="116" id="Bhm-Dw-Kbr"/>
                             <constraint firstItem="sQy-Hg-D2O" firstAttribute="top" secondItem="qOr-6X-GWa" secondAttribute="bottom" constant="8" id="ClM-y1-9Cc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7nJ-MU-hfX" secondAttribute="trailing" constant="144" id="HdU-ao-Ali"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sQy-Hg-D2O" secondAttribute="trailing" constant="132" id="JJD-Ba-7ql"/>

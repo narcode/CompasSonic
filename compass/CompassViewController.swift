@@ -20,9 +20,9 @@ class CompassViewController: UIViewController {
     set { UserDefaults.standard.currentLocation = newValue }
   }
     
-  let path1 = Bundle.main.path(forResource: "cats.mp3", ofType:nil)!
-  let path2 = Bundle.main.path(forResource: "art.mp3", ofType:nil)!
-  let path3 = Bundle.main.path(forResource: "hall.mp3", ofType:nil)!
+  let path1 = Bundle.main.path(forResource: "hall.mp3", ofType:nil)!
+  let path2 = Bundle.main.path(forResource: "cats.mp3", ofType:nil)!
+  let path3 = Bundle.main.path(forResource: "art.mp3", ofType:nil)!
 
   var sound1 : Sound? = nil
   var sound2 : Sound? = nil
@@ -68,7 +68,7 @@ class CompassViewController: UIViewController {
             vol = 1 - abs((angleCur - mid) / (Float(angleHi) - mid))
             print(">>>>>> current vol: ", vol)
         }
-        // second case scenario: lo > hi
+        // second case scenario: lo > hi **** Buggy ****
         else {
             mid = Float(angleLo + ((6.28 - angleLo + angleHi) / 2))
             if(mid > 6.28){
@@ -170,13 +170,13 @@ class CompassViewController: UIViewController {
         
         // sound ranges
         let lo1: Float = 5.71
-        let hi1: Float = 1.57
+        let hi1: Float = 1.4
         
         let lo2: Float = 1.57
-        let hi2: Float = 3
+        let hi2: Float = 4
         
-        let lo3: Float = 3
-        let hi3: Float = 4.5
+        let lo3: Float = 4
+        let hi3: Float = 5
         
         if((angleFlipped < 6.28 && angleFlipped > lo1) || (angleFlipped < hi1 && angleFlipped > 0)){
             print("sound1 playing")
