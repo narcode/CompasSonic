@@ -154,19 +154,6 @@ class CompassViewController: UIViewController {
 //        let angleDegree = -angle.radiansToDegrees
         print("ANGLE: ", angleFlipped)
         //print(newHeading) // this are the degrees :)
-
-//        if(newHeading >= 355 && newHeading <= 360){
-//            print("sound1 playing")
-//            self.sound1?.volume = 1
-//        } else {
-//            if(newHeading >= 354-25 && newHeading <= 354) {
-//                print("sound1 softer")
-//                self.sound1?.volume = Float((newHeading/365)-0.9)
-//            } else {
-//                print("sound1 at 0")
-//                self.sound1?.volume = 0
-//                }
-//            }
         
         // sound ranges
         let lo1: Float = 5.71
