@@ -58,47 +58,24 @@ class CompassViewController: UIViewController {
   }
     
     public func volumeAdjustment(angleLo: Double, angleHi: Double, angleCur: Float) -> Float {
-        print("low angle: ", angleLo, "hi angle: ", angleHi, "current angle", angleCur)
-        var vol : Float = 1
+        //rounding
+        let lo = round(100 * angleLo) / 100
+        let hi = round(100 * angleHi) / 100
+        let cur = Float(round(100 * angleCur) / 100)
+        
+        print("low angle: ", lo, "hi angle: ", hi, "current angle", cur)
+        var vol : Float = 0
         var mid : Float = 0
 
         // first case scenario: lo < hi
-        if(angleLo < angleHi){
-            mid = Float(angleHi + angleLo) / 2
-            vol = 1 - abs((angleCur - mid) / (Float(angleHi) - mid))
+        if(lo < hi){
+            mid = Float(hi + lo) / 2
+            vol = 1 - abs((cur - mid) / (Float(hi) - mid))
             print(">>>>>> current vol: ", vol)
         }
         // second case scenario: lo > hi **** Buggy ****
-        else {
-            mid = Float(angleLo + ((6.28 - angleLo + angleHi) / 2))
-            if(mid > 6.28){
-                mid -= 6.28
-            }
-            print("mid ===== ", mid)
-            if(mid < 6.28){
-              if(angleCur < mid){
-                  vol = 1 - ((mid - angleCur) / (mid - Float(angleLo)))
-                  print(">>>>>> current vol (angleCur < mid): ", vol)
-              } else {
-                if(angleCur < 6.28){
-                    vol = 1 - ((angleCur - mid)  /  (mid - Float(angleLo))    )
-
-                }else{
-                    vol = 1 - ((angleCur + 6.28 - mid)  /  (mid - Float(angleLo))    )
-                }
-              }
-            } else {
-                if(angleCur > mid){
-                    vol = 1 - ((angleCur - mid) / (Float(angleHi) - mid))
-                } else {
-                    if(angleCur < 6.28){
-                        vol = 1 - ((6.28 - angleCur + mid) / (Float(angleHi) - mid))
-                    } else{
-                        vol = 1 - ((mid - angleCur) / (Float(angleHi) - mid))
-                    }
-                }
-            }
-            print(">>>>>> current vol: ", vol)
+        else{
+            vol = 1
         }
         return vol
     }
@@ -156,8 +133,8 @@ class CompassViewController: UIViewController {
         //print(newHeading) // this are the degrees :)
         
         // sound ranges
-        let lo1: Float = 5.71
-        let hi1: Float = 1.4
+        let lo1: Float = 5.17
+        let hi1: Float = 0.8
         
         let lo2: Float = 1.57
         let hi2: Float = 4
