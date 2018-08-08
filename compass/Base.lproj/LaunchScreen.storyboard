@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +22,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICMC icon.jpg" highlightedImage="ICMC icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sbr-Nc-ln5">
+                                <rect key="frame" x="28" y="52" width="320" height="172"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engage | Preserve | Advance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBK-yc-owP">
+                                <rect key="frame" x="72" y="252" width="232" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="VQl-uN-5r3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Felipe Ignacio Noriega" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jae-EG-3qN">
+                                <rect key="frame" x="81" y="484" width="215" height="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="905-iB-qb0">
+                                <rect key="frame" x="148" y="452" width="81" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qiya Yin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nJ-MU-hfX">
+                                <rect key="frame" x="124" y="513" width="128" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="KMG-ew-j0d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anne Veinberg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISy-7w-UIf">
+                                <rect key="frame" x="131" y="542" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I-lly Cheng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-6X-GWa">
+                                <rect key="frame" x="145" y="571" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jiawang Li" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQy-Hg-D2O">
+                                <rect key="frame" x="147" y="600" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug. 5-8 2018 - Daegu - South Korea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQu-UM-mAn">
+                                <rect key="frame" x="35" y="363" width="272" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hackathon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D8-2z-BTe">
-                                <rect key="frame" x="62" y="301.5" width="250" height="64.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <rect key="frame" x="49" y="283" width="277" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="textColor" red="1" green="0.49431848726658489" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="0D8-2z-BTe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Fkj-c3-mv3"/>
-                            <constraint firstItem="0D8-2z-BTe" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Tyg-W5-nXm"/>
+                            <constraint firstItem="SBK-yc-owP" firstAttribute="centerX" secondItem="0D8-2z-BTe" secondAttribute="centerX" id="2HN-eC-847"/>
+                            <constraint firstItem="905-iB-qb0" firstAttribute="trailing" secondItem="qOr-6X-GWa" secondAttribute="trailing" id="7mW-Bc-CX2"/>
+                            <constraint firstItem="qOr-6X-GWa" firstAttribute="top" secondItem="ISy-7w-UIf" secondAttribute="bottom" constant="8" symbolic="YES" id="8Pd-Em-Aod"/>
+                            <constraint firstItem="905-iB-qb0" firstAttribute="top" secondItem="WQu-UM-mAn" secondAttribute="bottom" constant="69" id="AUd-SO-hjs"/>
+                            <constraint firstItem="sQy-Hg-D2O" firstAttribute="top" secondItem="qOr-6X-GWa" secondAttribute="bottom" constant="8" symbolic="YES" id="AiA-fA-VbZ"/>
+                            <constraint firstItem="SBK-yc-owP" firstAttribute="centerX" secondItem="905-iB-qb0" secondAttribute="centerX" id="Aoy-em-IVE"/>
+                            <constraint firstItem="ISy-7w-UIf" firstAttribute="top" secondItem="7nJ-MU-hfX" secondAttribute="bottom" constant="8" symbolic="YES" id="BYO-Gn-r8H"/>
+                            <constraint firstItem="SBK-yc-owP" firstAttribute="centerX" secondItem="jae-EG-3qN" secondAttribute="centerX" id="DhI-rJ-fkg"/>
+                            <constraint firstAttribute="bottom" secondItem="905-iB-qb0" secondAttribute="bottom" constant="191" id="Kc5-fN-usQ"/>
+                            <constraint firstItem="jae-EG-3qN" firstAttribute="top" secondItem="905-iB-qb0" secondAttribute="bottom" constant="8" symbolic="YES" id="Nvs-7A-xfi"/>
+                            <constraint firstItem="SBK-yc-owP" firstAttribute="centerX" secondItem="Sbr-Nc-ln5" secondAttribute="centerX" id="dqZ-Jn-FpG"/>
+                            <constraint firstItem="SBK-yc-owP" firstAttribute="centerX" secondItem="7nJ-MU-hfX" secondAttribute="centerX" id="haf-oQ-sfK"/>
+                            <constraint firstItem="qOr-6X-GWa" firstAttribute="centerX" secondItem="ISy-7w-UIf" secondAttribute="centerX" id="o14-2f-G44"/>
+                            <constraint firstItem="SBK-yc-owP" firstAttribute="top" secondItem="Sbr-Nc-ln5" secondAttribute="bottom" constant="28" id="q82-zA-fgI"/>
+                            <constraint firstItem="7nJ-MU-hfX" firstAttribute="top" secondItem="jae-EG-3qN" secondAttribute="bottom" constant="8" symbolic="YES" id="spv-ao-pBE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sbr-Nc-ln5" secondAttribute="trailing" constant="11" id="tgj-fK-amr"/>
+                            <constraint firstItem="Sbr-Nc-ln5" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="32" id="u3C-Vy-V7T"/>
+                            <constraint firstItem="Sbr-Nc-ln5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="12" id="vCl-Iv-Wb9"/>
+                            <constraint firstItem="SBK-yc-owP" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="252" id="xBs-RS-8Ox"/>
+                            <constraint firstItem="WQu-UM-mAn" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="19" id="xDu-mH-ELq"/>
+                            <constraint firstItem="qOr-6X-GWa" firstAttribute="centerX" secondItem="sQy-Hg-D2O" secondAttribute="centerX" id="xQ7-OJ-b8Y"/>
+                            <constraint firstItem="0D8-2z-BTe" firstAttribute="top" secondItem="SBK-yc-owP" secondAttribute="bottom" id="zuR-fk-YKo"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="50.399999999999999" y="373.76311844077964"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ICMC icon.jpg" width="471" height="240"/>
+    </resources>
 </document>
