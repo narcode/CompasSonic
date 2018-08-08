@@ -26,7 +26,7 @@ class CompassViewController: UIViewController {
 //    set { UserDefaults.standard.currentLocation = newValue }
 //  }
 
-  // load ICMClocations and sounds
+  // load ICMClocations and sounds \\ felipe
     var location_cats = CLLocation(latitude: 35.869243, longitude: 128.595156)
     var location_hall = CLLocation(latitude: 35.875711640645228, longitude: 128.59409842832042)
     var location_art = CLLocation(latitude: 35.875508236691772, longitude: 128.58446901882641)
