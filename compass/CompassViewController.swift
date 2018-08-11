@@ -35,7 +35,7 @@ class CompassViewController: UIViewController {
   let path1 = Bundle.main.path(forResource: "cats.mp3", ofType:nil)!
   let path2 = Bundle.main.path(forResource: "hall.mp3", ofType:nil)!
   let path3 = Bundle.main.path(forResource: "art.mp3", ofType:nil)!
-  let path4 = Bundle.main.path(forResource: "kpop.mp3", ofType:nil)!
+  let path4 = Bundle.main.path(forResource: "kPop.mp3", ofType:nil)!
 
   var sound1 : Sound? = nil
   var sound2 : Sound? = nil
@@ -163,7 +163,7 @@ class CompassViewController: UIViewController {
         print("FIRST LOCATION -> ", heading_locations)
         
         // calibration compensation or error margin:
-        let error_margin = 5.0
+        let error_margin = 0.5
         
         // play sounds if device is pointing to the specific location:
         if(heading_locations >= chris_value-error_margin && heading_locations <= chris_value+error_margin){

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,14 +19,14 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICMC icon.jpg" highlightedImage="ICMC icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sbr-Nc-ln5">
-                                <rect key="frame" x="32" y="52" width="351" height="172"/>
+                                <rect key="frame" x="28" y="52" width="265" height="172"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engage | Preserve | Advance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBK-yc-owP">
-                                <rect key="frame" x="92.333333333333314" y="252" width="232" height="31"/>
+                                <rect key="frame" x="44.5" y="252" width="232" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="VQl-uN-5r3"/>
                                 </constraints>
@@ -35,49 +35,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Felipe Ignacio Noriega" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jae-EG-3qN">
-                                <rect key="frame" x="123.66666666666669" y="553" width="170" height="21"/>
+                                <rect key="frame" x="76" y="385" width="170" height="21"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Made by:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="905-iB-qb0">
-                                <rect key="frame" x="168.33333333333334" y="521" width="81" height="24"/>
+                                <rect key="frame" x="120.5" y="377" width="81" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qiya Yin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nJ-MU-hfX">
-                                <rect key="frame" x="176.66666666666666" y="582" width="63" height="21"/>
+                                <rect key="frame" x="129" y="414" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anne Veinberg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISy-7w-UIf">
-                                <rect key="frame" x="151.33333333333334" y="611" width="112.00000000000003" height="21"/>
+                                <rect key="frame" x="103.5" y="443" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I-lly Cheng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-6X-GWa">
-                                <rect key="frame" x="165.33333333333334" y="640" width="84" height="21"/>
+                                <rect key="frame" x="117.5" y="472" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jiawang Li" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQy-Hg-D2O">
-                                <rect key="frame" x="167.33333333333334" y="669" width="80" height="21"/>
+                                <rect key="frame" x="119.5" y="501" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.4943184873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug. 5-8 2018 - Daegu - South Korea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQu-UM-mAn">
-                                <rect key="frame" x="71" y="363" width="272" height="89"/>
+                                <rect key="frame" x="24" y="308" width="272" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.99404761900000005" green="0.9880952381" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Hackathon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D8-2z-BTe">
-                                <rect key="frame" x="69.333333333333314" y="283" width="277" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Hackathon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D8-2z-BTe">
+                                <rect key="frame" x="22" y="283" width="277" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="textColor" red="1" green="0.49431848726658489" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                             <constraint firstItem="WQu-UM-mAn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Z8U-QB-5e3"/>
                             <constraint firstItem="SBK-yc-owP" firstAttribute="centerX" secondItem="Sbr-Nc-ln5" secondAttribute="centerX" id="dqZ-Jn-FpG"/>
                             <constraint firstItem="SBK-yc-owP" firstAttribute="centerX" secondItem="7nJ-MU-hfX" secondAttribute="centerX" id="haf-oQ-sfK"/>
-                            <constraint firstItem="WQu-UM-mAn" firstAttribute="top" secondItem="0D8-2z-BTe" secondAttribute="bottom" constant="8" id="ipw-mC-Ou3"/>
+                            <constraint firstItem="WQu-UM-mAn" firstAttribute="top" secondItem="0D8-2z-BTe" secondAttribute="bottom" constant="-45" id="ipw-mC-Ou3"/>
                             <constraint firstItem="qOr-6X-GWa" firstAttribute="centerX" secondItem="ISy-7w-UIf" secondAttribute="centerX" id="o14-2f-G44"/>
                             <constraint firstItem="SBK-yc-owP" firstAttribute="top" secondItem="Sbr-Nc-ln5" secondAttribute="bottom" constant="28" id="q82-zA-fgI"/>
                             <constraint firstItem="7nJ-MU-hfX" firstAttribute="top" secondItem="jae-EG-3qN" secondAttribute="bottom" constant="8" symbolic="YES" id="spv-ao-pBE"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.399999999999999" y="373.76311844077964"/>
+            <point key="canvasLocation" x="48.75" y="372.88732394366195"/>
         </scene>
     </scenes>
     <resources>

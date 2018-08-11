@@ -21,8 +21,8 @@
 		8338E3212119C1150076B9B2 /* art.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7A2119BCCB00E98528 /* art.mp3 */; };
 		8338E3222119C1150076B9B2 /* cats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7B2119BCCB00E98528 /* cats.mp3 */; };
 		8338E3232119C1150076B9B2 /* hall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7C2119BCCC00E98528 /* hall.mp3 */; };
-		83D447D7211A9F05001671C8 /* kpop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83D447D6211A9F05001671C8 /* kpop.mp3 */; };
 		A79265B3211AB156006676E1 /* ICMC icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A79265B2211AB156006676E1 /* ICMC icon.jpg */; };
+		A7D42C42211EF84C009D3165 /* kPop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7A45C74211EF2B50065CA15 /* kPop.mp3 */; };
 		A7E4CB772119873F00E98528 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4CB762119873F00E98528 /* Sound.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +40,8 @@
 		64E8BF7D1E953A6200B10108 /* LocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
 		64E8BF7F1E953ACC00B10108 /* CLLocation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
 		8338E31821199B2A0076B9B2 /* gls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gls.mp3; path = ../../../gls.mp3; sourceTree = "<group>"; };
-		83D447D6211A9F05001671C8 /* kpop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kpop.mp3; path = ../../../../Downloads/kpop.mp3; sourceTree = "<group>"; };
 		A79265B2211AB156006676E1 /* ICMC icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ICMC icon.jpg"; sourceTree = "<group>"; };
+		A7A45C74211EF2B50065CA15 /* kPop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kPop.mp3; sourceTree = "<group>"; };
 		A7E4CB762119873F00E98528 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		A7E4CB7A2119BCCB00E98528 /* art.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = art.mp3; sourceTree = "<group>"; };
 		A7E4CB7B2119BCCB00E98528 /* cats.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cats.mp3; sourceTree = "<group>"; };
@@ -108,9 +108,9 @@
 		A7E4CB7121196DC000E98528 /* Sonic */ = {
 			isa = PBXGroup;
 			children = (
+				A7A45C74211EF2B50065CA15 /* kPop.mp3 */,
 				A7E4CB7A2119BCCB00E98528 /* art.mp3 */,
 				A7E4CB7B2119BCCB00E98528 /* cats.mp3 */,
-				83D447D6211A9F05001671C8 /* kpop.mp3 */,
 				A7E4CB7C2119BCCC00E98528 /* hall.mp3 */,
 			);
 			path = Sonic;
@@ -176,8 +176,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D42C42211EF84C009D3165 /* kPop.mp3 in Resources */,
 				A79265B3211AB156006676E1 /* ICMC icon.jpg in Resources */,
-				83D447D7211A9F05001671C8 /* kpop.mp3 in Resources */,
 				8338E3212119C1150076B9B2 /* art.mp3 in Resources */,
 				8338E3222119C1150076B9B2 /* cats.mp3 in Resources */,
 				8338E3232119C1150076B9B2 /* hall.mp3 in Resources */,
