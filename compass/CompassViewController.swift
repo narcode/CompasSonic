@@ -32,7 +32,7 @@ class CompassViewController: UIViewController {
   var location_anne = CLLocation(latitude: 35.875711640645228, longitude: 128.59409842832042)
   var location_i_lly = CLLocation(latitude: 35.875508236691772, longitude: 128.58446901882641)
   var location_chris = CLLocation(latitude: 35.8776782, longitude: 128.5947702)
-  var location_jeena = CLLocation(latitude: 35.8776782, longitude: 128.5947702)
+  var location_jeena = CLLocation(latitude: 40.45149420000001, longitude: -79.95323969999998)
 
   let path1 = Bundle.main.path(forResource: "cats.mp3", ofType:nil)! //felipe
   let path2 = Bundle.main.path(forResource: "hall.mp3", ofType:nil)! //anne
@@ -143,7 +143,7 @@ class CompassViewController: UIViewController {
         let chris_value2 = Double(abs(self.yourLocationBearing2.radiansToDegrees))
         let chris_value3 = Double(abs(self.yourLocationBearing3.radiansToDegrees))
         let chris_value4 = Double(abs(self.yourLocationBearing4.radiansToDegrees))
-        let chris_value5 = Double(abs(self.yourLocationBearing4.radiansToDegrees))
+        let chris_value5 = Double(abs(self.yourLocationBearing5.radiansToDegrees))
         
         print("CHRIS VALUE: ", chris_value, "chris value 2: ", chris_value2, "chris value 3: ", chris_value3, "chris value 4: ", chris_value4, "chris value 5: ", chris_value5)
 
@@ -165,10 +165,10 @@ class CompassViewController: UIViewController {
         print("TRUE NORTH: ", newHeading) // this are the degrees :)
 
         let heading_locations = 360-newHeading
-        print("FIRST LOCATION -> ", heading_locations)
+        print("HEADING LOCATION -> ", heading_locations)
         
         // calibration compensation or error margin:
-        let error_margin = 0.5
+        let error_margin = 1.0
         
         // play sounds if device is pointing to the specific location:
         if(heading_locations >= chris_value-error_margin && heading_locations <= chris_value+error_margin){
