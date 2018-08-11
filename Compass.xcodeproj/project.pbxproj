@@ -17,7 +17,6 @@
 		64E8BF761E9535A200B10108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E8BF741E9535A200B10108 /* LaunchScreen.storyboard */; };
 		64E8BF7E1E953A6200B10108 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E8BF7D1E953A6200B10108 /* LocationDelegate.swift */; };
 		64E8BF801E953ACC00B10108 /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E8BF7F1E953ACC00B10108 /* CLLocation+Extension.swift */; };
-		8338E31921199B2A0076B9B2 /* gls.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8338E31821199B2A0076B9B2 /* gls.mp3 */; };
 		8338E3212119C1150076B9B2 /* art.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7A2119BCCB00E98528 /* art.mp3 */; };
 		8338E3222119C1150076B9B2 /* cats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7B2119BCCB00E98528 /* cats.mp3 */; };
 		8338E3232119C1150076B9B2 /* hall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A7E4CB7C2119BCCC00E98528 /* hall.mp3 */; };
@@ -148,7 +147,7 @@
 				TargetAttributes = {
 					64E8BF671E9535A200B10108 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 7TXP3XY4W3;
+						DevelopmentTeam = F27MJTAAUV;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -183,7 +182,6 @@
 				8338E3232119C1150076B9B2 /* hall.mp3 in Resources */,
 				64E8BF761E9535A200B10108 /* LaunchScreen.storyboard in Resources */,
 				64E8BF731E9535A200B10108 /* Assets.xcassets in Resources */,
-				8338E31921199B2A0076B9B2 /* gls.mp3 in Resources */,
 				64E8BF711E9535A200B10108 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7TXP3XY4W3;
+				DEVELOPMENT_TEAM = F27MJTAAUV;
 				INFOPLIST_FILE = compass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -357,7 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7TXP3XY4W3;
+				DEVELOPMENT_TEAM = F27MJTAAUV;
 				INFOPLIST_FILE = compass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

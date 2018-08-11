@@ -16,31 +16,37 @@ class CompassViewController: UIViewController {
   @IBOutlet weak var imageView: UIImageView!
   let locationDelegate = LocationDelegate()
   var latestLocation: CLLocation? = nil
-  var yourLocationBearing: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_cats) ?? 0 }
-  var yourLocationBearing2: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_hall) ?? 0 }
-  var yourLocationBearing3: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_art) ?? 0 }
-  var yourLocationBearing4: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_kpop) ?? 0 }
+  var yourLocationBearing: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_felipe) ?? 0 }
+  var yourLocationBearing2: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_anne) ?? 0 }
+  var yourLocationBearing3: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_i_lly) ?? 0 }
+  var yourLocationBearing4: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_chris) ?? 0 }
+  var yourLocationBearing5: CGFloat { return latestLocation?.bearingToLocationRadian(self.location_jeena) ?? 0 }
 
 //  var yourLocation: CLLocation {
 //    get { return UserDefaults.standard.currentLocation }
 //    set { UserDefaults.standard.currentLocation = newValue }
 //  }
 
-  // load ICMClocations and sounds \\ felipe
-    var location_cats = CLLocation(latitude: 35.869243, longitude: 128.595156)
-    var location_hall = CLLocation(latitude: 35.875711640645228, longitude: 128.59409842832042)
-    var location_art = CLLocation(latitude: 35.875508236691772, longitude: 128.58446901882641)
-  var location_kpop = CLLocation(latitude: 35.8776782, longitude: 128.5947702)
+  // load ICMClocations and sounds
+  var location_felipe = CLLocation(latitude: 35.869243, longitude: 128.595156)
+  var location_anne = CLLocation(latitude: 35.875711640645228, longitude: 128.59409842832042)
+  var location_i_lly = CLLocation(latitude: 35.875508236691772, longitude: 128.58446901882641)
+  var location_chris = CLLocation(latitude: 35.8776782, longitude: 128.5947702)
+  var location_jeena = CLLocation(latitude: 35.8776782, longitude: 128.5947702)
 
-  let path1 = Bundle.main.path(forResource: "cats.mp3", ofType:nil)!
-  let path2 = Bundle.main.path(forResource: "hall.mp3", ofType:nil)!
-  let path3 = Bundle.main.path(forResource: "art.mp3", ofType:nil)!
-  let path4 = Bundle.main.path(forResource: "kPop.mp3", ofType:nil)!
+  let path1 = Bundle.main.path(forResource: "cats.mp3", ofType:nil)! //felipe
+  let path2 = Bundle.main.path(forResource: "hall.mp3", ofType:nil)! //anne
+  let path3 = Bundle.main.path(forResource: "art.mp3", ofType:nil)!  //i-lly
+  let path4 = Bundle.main.path(forResource: "kPop.mp3", ofType:nil)! //chris
+  let path5 = Bundle.main.path(forResource: "kPop.mp3", ofType:nil)! //jeena
+
 
   var sound1 : Sound? = nil
   var sound2 : Sound? = nil
   var sound3 : Sound? = nil
   var sound4 : Sound? = nil
+  var sound5 : Sound? = nil
+
 
   var sounds : Array<Sound?> = []
     
@@ -101,11 +107,14 @@ class CompassViewController: UIViewController {
         self.sound2 = Sound(url: URL(fileURLWithPath: path2))
         self.sound3 = Sound(url: URL(fileURLWithPath: path3))
         self.sound4 = Sound(url: URL(fileURLWithPath: path4))
+        self.sound5 = Sound(url: URL(fileURLWithPath: path5))
+
         
         self.sounds.append(self.sound1)
         self.sounds.append(self.sound2)
         self.sounds.append(self.sound3)
         self.sounds.append(self.sound4)
+        self.sounds.append(self.sound5)
         
         self.sound1?.volume = 0
         self.sound1?.play(numberOfLoops: -1)
@@ -115,7 +124,8 @@ class CompassViewController: UIViewController {
         self.sound3?.play(numberOfLoops: -1)
         self.sound4?.volume = 0
         self.sound4?.play(numberOfLoops: -1)
-        
+        self.sound5?.volume = 0
+        self.sound5?.play(numberOfLoops: -1)
     }
     
   override func viewDidLoad() {
@@ -133,8 +143,9 @@ class CompassViewController: UIViewController {
         let chris_value2 = Double(abs(self.yourLocationBearing2.radiansToDegrees))
         let chris_value3 = Double(abs(self.yourLocationBearing3.radiansToDegrees))
         let chris_value4 = Double(abs(self.yourLocationBearing4.radiansToDegrees))
+        let chris_value5 = Double(abs(self.yourLocationBearing4.radiansToDegrees))
         
-        print("CHRIS VALUE: ", chris_value, "chris value 2: ", chris_value2, "chris value 3: ", chris_value3, "chris value 4: ", chris_value4)
+        print("CHRIS VALUE: ", chris_value, "chris value 2: ", chris_value2, "chris value 3: ", chris_value3, "chris value 4: ", chris_value4, "chris value 5: ", chris_value5)
 
         
       func computeNewAngle(with newAngle: CGFloat) -> CGFloat {
@@ -149,16 +160,10 @@ class CompassViewController: UIViewController {
         return CGFloat(self.orientationAdjustment().degreesToRadians + heading)
       }
       
-//      print(self.location_cats)
-        
       UIView.animate(withDuration: 0.5) {
         
-//        let angle = computeNewAngle(with: CGFloat(newHeading))
-//        let angleDegree = -angle.radiansToDegrees
-//        print("ANGLE: ", angle.radiansToDegrees)
         print("TRUE NORTH: ", newHeading) // this are the degrees :)
-//        let angle_cats = angle.radiansToDegrees
-//        let heading_cats = 360-abs(angle_cats)
+
         let heading_locations = 360-newHeading
         print("FIRST LOCATION -> ", heading_locations)
         
@@ -168,7 +173,8 @@ class CompassViewController: UIViewController {
         // play sounds if device is pointing to the specific location:
         if(heading_locations >= chris_value-error_margin && heading_locations <= chris_value+error_margin){
             print("sound1 playing")
-            self.sound1?.volume = self.volumeAdjustment(angleLo: chris_value-error_margin, angleHi: chris_value+error_margin,
+            self.sound1?.volume = self.volumeAdjustment(angleLo: chris_value-error_margin,
+                                                        angleHi: chris_value+error_margin,
                                                         angleCur: Float(heading_locations))
         } else {
             
@@ -178,7 +184,8 @@ class CompassViewController: UIViewController {
         
         if(heading_locations >= chris_value2-error_margin && heading_locations <= chris_value2+error_margin){
             print("sound2 playing")
-            self.sound2?.volume = self.volumeAdjustment(angleLo: chris_value2-error_margin, angleHi: chris_value2+error_margin,
+            self.sound2?.volume = self.volumeAdjustment(angleLo: chris_value2-error_margin,
+                                                        angleHi: chris_value2+error_margin,
                                                         angleCur: Float(heading_locations))
         } else {
             print("sound2 off")
@@ -187,7 +194,8 @@ class CompassViewController: UIViewController {
         
         if(heading_locations >= chris_value3-error_margin && heading_locations <= chris_value3+error_margin){
             print("sound3 playing")
-            self.sound3?.volume = self.volumeAdjustment(angleLo: chris_value3-error_margin, angleHi: chris_value3+error_margin,
+            self.sound3?.volume = self.volumeAdjustment(angleLo: chris_value3-error_margin,
+                                                        angleHi: chris_value3+error_margin,
                                                         angleCur: Float(heading_locations))
         } else {
             print("sound3 off")
@@ -196,14 +204,23 @@ class CompassViewController: UIViewController {
         
         if(heading_locations >= chris_value4-error_margin && heading_locations <= chris_value4+error_margin){
             print("sound4 playing")
-            self.sound4?.volume = self.volumeAdjustment(angleLo: chris_value4-error_margin, angleHi: chris_value4+error_margin,
+            self.sound4?.volume = self.volumeAdjustment(angleLo: chris_value4-error_margin,
+                                                        angleHi: chris_value4+error_margin,
                                                         angleCur: Float(heading_locations))
         } else {
             print("sound4 off")
             self.sound4?.volume = 0
         }
         
-//        self.imageView.transform = CGAffineTransform(rotationAngle: angle)
+        if(heading_locations >= chris_value5-error_margin && heading_locations <= chris_value5+error_margin){
+            print("sound5 playing")
+            self.sound5?.volume = self.volumeAdjustment(angleLo: chris_value5-error_margin,
+                                                        angleHi: chris_value5+error_margin,
+                                                        angleCur: Float(heading_locations))
+        } else {
+            print("sound5 off")
+            self.sound5?.volume = 0
+        }
       }
     }
     
